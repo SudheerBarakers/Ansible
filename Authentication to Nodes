@@ -1,0 +1,27 @@
+1. Password Authentication 
+  
+       $ sudo -i file.pem root@IP
+        
+       $ sudo -i file.pem root@12.32.32.230
+        
+        
+        
+ 2. Passwordless Authentication
+ 
+    2.1 Generate SSH Key Pair by the following command in Ansible Controller
+          
+         $ ssh-keygen
+          
+          The following key pair will be stored in .ssh directory:
+
+          $ cd .ssh
+          .ssh > id_rsa, id_rsa.pub
+          
+          1. id_rsa is the private key.
+          2. id_rsa.pub is the public key.
+          
+    2.2 Copy public key - id_rsa.pub into Ansible nodes ( Servers )
+    
+    2.3 In Ansible controller , Run the follwoing command
+    
+            $ sudo root@12.32.32.230
